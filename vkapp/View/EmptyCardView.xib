@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EmptyCardView" customModule="vkapp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ничего не найдено, попробуйте позже" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJf-7C-SHN">
+                    <rect key="frame" x="46.5" y="313" width="281" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kn-kf-wF2">
+                    <rect key="frame" x="153" y="374" width="70" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="mCK-bG-b7V"/>
+                    </constraints>
+                    <state key="normal" title="Обновить">
+                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="updateBtnPressedWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="jT2-6X-3Ac"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="XJf-7C-SHN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fEW-UT-g7L"/>
+                <constraint firstItem="0Kn-kf-wF2" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hWe-LI-q0a"/>
+                <constraint firstItem="XJf-7C-SHN" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.75" id="ibE-tu-cqY"/>
+                <constraint firstItem="XJf-7C-SHN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="rNQ-Pu-Ag0"/>
+                <constraint firstItem="0Kn-kf-wF2" firstAttribute="top" secondItem="XJf-7C-SHN" secondAttribute="bottom" constant="20" id="rfV-Xa-VyP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="notFoundLabel" destination="XJf-7C-SHN" id="QZw-Ch-hnY"/>
+                <outlet property="updateButton" destination="0Kn-kf-wF2" id="P33-f2-RkW"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="65.5"/>
+        </view>
+    </objects>
+</document>
