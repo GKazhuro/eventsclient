@@ -47,8 +47,6 @@ class PersonListViewController: UIViewController {
             matchesHeightConstraint.constant = 0
             self.view.layoutIfNeeded()
         }
-        
-        loadData()
     }
     
     func loadData() {
@@ -89,6 +87,8 @@ class PersonListViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        loadData()
         
         let emptyCardViewSubview = Bundle.main.loadNibNamed("EmptyCardView", owner: self, options: nil)![0] as! EmptyCardView
         emptyCardViewSubview.delegate = self
